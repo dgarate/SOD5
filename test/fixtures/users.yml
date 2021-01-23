@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  superadmin_role: false
+  supervisor_role: false
+  user_role: false
+  end_date: 2021-01-23
+  company: one
+
+two:
+  name: MyString
+  email: MyString
+  superadmin_role: false
+  supervisor_role: false
+  user_role: false
+  end_date: 2021-01-23
+  company: two

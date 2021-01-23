@@ -1,0 +1,2 @@
+module UserResponsibilitiesHelper
+end

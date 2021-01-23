@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @responsibility.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @responsibility.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @responsibility.type %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @responsibility.end_date %>
+</p>
+
+<p>
+  <strong>Cycle:</strong>
+  <%= @responsibility.cycle_id %>
+</p>
+
+<%= link_to 'Edit', edit_responsibility_path(@responsibility) %> |
+<%= link_to 'Back', responsibilities_path %>

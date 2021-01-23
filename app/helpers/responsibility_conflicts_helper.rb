@@ -1,0 +1,2 @@
+module ResponsibilityConflictsHelper
+end

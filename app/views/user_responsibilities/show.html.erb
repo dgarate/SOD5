@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User access:</strong>
+  <%= @user_responsibility.user_access_id %>
+</p>
+
+<p>
+  <strong>Responsibility:</strong>
+  <%= @user_responsibility.responsibility_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_responsibility_path(@user_responsibility) %> |
+<%= link_to 'Back', user_responsibilities_path %>

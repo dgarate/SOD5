@@ -1,0 +1,27 @@
+<%= form_with(model: responsibility_conflict, local: true) do |form| %>
+  <% if responsibility_conflict.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(responsibility_conflict.errors.count, "error") %> prohibited this responsibility_conflict from being saved:</h2>
+
+      <ul>
+        <% responsibility_conflict.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :responsibility_id %>
+    <%= form.text_field :responsibility_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :control %>
+    <%= form.text_field :control %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

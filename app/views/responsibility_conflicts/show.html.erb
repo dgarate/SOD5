@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Responsibility:</strong>
+  <%= @responsibility_conflict.responsibility_id %>
+</p>
+
+<p>
+  <strong>Control:</strong>
+  <%= @responsibility_conflict.control %>
+</p>
+
+<%= link_to 'Edit', edit_responsibility_conflict_path(@responsibility_conflict) %> |
+<%= link_to 'Back', responsibility_conflicts_path %>

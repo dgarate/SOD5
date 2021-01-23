@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @conflict.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @conflict.description %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @conflict.end_date %>
+</p>
+
+<p>
+  <strong>Cycle:</strong>
+  <%= @conflict.cycle_id %>
+</p>
+
+<%= link_to 'Edit', edit_conflict_path(@conflict) %> |
+<%= link_to 'Back', conflicts_path %>
