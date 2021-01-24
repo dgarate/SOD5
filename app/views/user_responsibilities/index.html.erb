@@ -14,8 +14,8 @@
   <tbody>
     <% @user_responsibilities.each do |user_responsibility| %>
       <tr>
-        <td><%= user_responsibility.user_access_id %></td>
-        <td><%= user_responsibility.responsibility_id %></td>
+        <td><%= user_responsibility.user_access.username %></td>
+        <td><%= user_responsibility.responsibility.name %></td>
         <td><%= link_to 'Show', user_responsibility %></td>
         <td><%= link_to 'Edit', edit_user_responsibility_path(user_responsibility) %></td>
         <td><%= link_to 'Destroy', user_responsibility, method: :delete, data: { confirm: 'Are you sure?' } %></td>

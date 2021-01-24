@@ -4,4 +4,10 @@ class Conflict < ApplicationRecord
   has_many :responsibilities, through: :responsibility_conflicts
   has_many :user_conflicts
   has_many :user_accesses, through: :user_conflicts
+
+  def self.group_cycle
+    Conflict.group(:cycle).count
+  end
+
+
 end

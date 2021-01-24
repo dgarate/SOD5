@@ -7,6 +7,7 @@
     <tr>
       <th>Username</th>
       <th>Responsibility</th>
+      <th>Conflicts</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
     <% @user_accesses.each do |user_access| %>
       <tr>
         <td><%= user_access.username %></td>
+        <td><%= user_access.responsibility %></td>
         <td><%= user_access.conflicts %></td>
         <td><%= link_to 'Show', user_access %></td>
         <td><%= link_to 'Edit', edit_user_access_path(user_access) %></td>

@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Conflict</th>
       <th>Responsibility</th>
-      <th>Control</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @responsibility_conflicts.each do |responsibility_conflict| %>
       <tr>
-        <td><%= responsibility_conflict.responsibility_id %></td>
-        <td><%= responsibility_conflict.control %></td>
+        <td><%= responsibility_conflict.conflict.name %></td>
+        <td><%= responsibility_conflict.responsibility.name %></td>
         <td><%= link_to 'Show', responsibility_conflict %></td>
         <td><%= link_to 'Edit', edit_responsibility_conflict_path(responsibility_conflict) %></td>
         <td><%= link_to 'Destroy', responsibility_conflict, method: :delete, data: { confirm: 'Are you sure?' } %></td>

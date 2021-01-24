@@ -2,13 +2,23 @@
 
 <h1>Conflicts</h1>
 
+<br>
+  
+<div>
+  <h2> Conflict by Cycle </h2>
+    <%= bar_chart @conflict_cycle_count %>
+    <%= bar_chart(a: 3, b: 9, c: 4) %>
+</div>
+
+
+
 <table>
   <thead>
     <tr>
+      <th>Cycle</th>
       <th>Name</th>
       <th>Description</th>
       <th>End date</th>
-      <th>Cycle</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +26,10 @@
   <tbody>
     <% @conflicts.each do |conflict| %>
       <tr>
+        <td><%= conflict.cycle.name %></td>
         <td><%= conflict.name %></td>
         <td><%= conflict.description %></td>
         <td><%= conflict.end_date %></td>
-        <td><%= conflict.cycle_id %></td>
         <td><%= link_to 'Show', conflict %></td>
         <td><%= link_to 'Edit', edit_conflict_path(conflict) %></td>
         <td><%= link_to 'Destroy', conflict, method: :delete, data: { confirm: 'Are you sure?' } %></td>

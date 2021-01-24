@@ -12,9 +12,9 @@ Company.create(name: 'Coke', end_date: Date.today + 365.days)
 Company.create(name: 'Samsung', end_date: Date.today + 365.days)
 
 
-cycle = Cycle.create(name: 'Cuentas x Pagar', description: 'Cuentas x Pagar', end_date: Date.today)
-Cycle.create(name: 'Cuentas x Cobrar', description: 'Cuentas x Cobrar', end_date: Date.today + 7.days)
-Cycle.create(name: 'General Ledger', description: 'General Ledger', end_date: Date.today + 15.days)
+cycle = Cycle.create(name: 'PTP', description: 'Cuentas x Pagar', end_date: Date.today)
+Cycle.create(name: 'PTP', description: 'Cuentas x Cobrar', end_date: Date.today + 7.days)
+Cycle.create(name: 'RTR', description: 'General Ledger', end_date: Date.today + 15.days)
 
 r1 = Responsibility.create(name: 'R1', description: 'Ingresar Factura Proveedor', end_date: Date.today + 30.days, cycle: cycle)
 r2 = Responsibility.create(name: 'R2', description: 'Pagar Factura Proveedor', end_date: Date.today + 30.days, cycle: cycle)
