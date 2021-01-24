@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Company.create(name: 'Apple', end_date: Date.today + 365.days)
+Company.create(name: 'Coke', end_date: Date.today + 365.days)
+Company.create(name: 'Samsung', end_date: Date.today + 365.days)
+
 
 cycle = Cycle.create(name: 'Cuentas x Pagar', description: 'Cuentas x Pagar', end_date: Date.today)
 Cycle.create(name: 'Cuentas x Cobrar', description: 'Cuentas x Cobrar', end_date: Date.today + 7.days)

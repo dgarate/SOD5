@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'home#index'
   resources :user_responsibilities
   resources :user_conflicts
