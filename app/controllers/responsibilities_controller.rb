@@ -1,6 +1,6 @@
 class ResponsibilitiesController < ApplicationController
   before_action :set_responsibility, only: %w[ show edit update destroy ]
-
+  load_and_authorize_resource
   # GET /responsibilities
   # GET /responsibilities.json
   def index

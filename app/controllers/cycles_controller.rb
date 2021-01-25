@@ -1,6 +1,6 @@
 class CyclesController < ApplicationController
   before_action :set_cycle, only: %w[ show edit update destroy ]
-
+  load_and_authorize_resource
   # GET /cycles
   # GET /cycles.json
   def index
@@ -10,7 +10,7 @@ class CyclesController < ApplicationController
   # GET /cycles/1
   # GET /cycles/1.json
   def show
-  end
+   end
 
   # GET /cycles/new
   def new

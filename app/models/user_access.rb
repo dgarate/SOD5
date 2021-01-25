@@ -1,7 +1,7 @@
 class UserAccess < ApplicationRecord
-    has_many :user_conflicts
+    has_many :user_conflicts, dependent: :restrict_with_exception
     has_many :conflicts, through: :user_conflicts
-    has_many :user_responsibilities
+    has_many :user_responsibilities, dependent: :restrict_with_exception
     has_many :responsibilities, through: :user_responsibilities
 
     def conflicts

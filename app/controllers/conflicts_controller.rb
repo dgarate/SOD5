@@ -1,6 +1,6 @@
 class ConflictsController < ApplicationController
   before_action :set_conflict, only: %w[ show edit update destroy ]
-
+  load_and_authorize_resource
   # GET /conflicts
   # GET /conflicts.json
   def index
