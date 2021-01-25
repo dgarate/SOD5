@@ -12,6 +12,12 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :cycle_id %>
+    <%= form.text_field :cycle_id %>
+  </div>
+  
+
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
@@ -22,14 +28,22 @@
   </div>
 
   <div class="field">
+    <%= form.label :responsibilities %>
+    <%= form.collection_check_boxes(:responsibility_ids, Responsibility.all, :id ,:name) do |b| %>
+      <%= b.label class:"label-checkbox" do %>
+        <%= b.check_box + b.text%>
+        
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <div class="field">
     <%= form.label :end_date %>
     <%= form.date_select :end_date %>
   </div>
 
-  <div class="field">
-    <%= form.label :cycle_id %>
-    <%= form.text_field :cycle_id %>
-  </div>
+  
 
   <div class="actions">
     <%= form.submit %>

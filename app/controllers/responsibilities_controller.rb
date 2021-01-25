@@ -69,6 +69,6 @@ class ResponsibilitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def responsibility_params
-      params.require(:responsibility).permit(:name, :description, :type, :end_date, :cycle_id)
+      params.require(:responsibility).permit(:name, :description, :resp_type, :end_date, :cycle_id)
     end
 end

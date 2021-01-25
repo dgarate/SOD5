@@ -1,4 +1,4 @@
 class Cycle < ApplicationRecord
     has_many :responsibilites
-    has_many :controls
+    has_many :conflicts
 end

@@ -25,10 +25,13 @@ class ConflictsController < ApplicationController
   # POST /conflicts
   # POST /conflicts.json
   def create
-    @conflict = Conflict.new(conflict_params)
-
+    @conflict = Conflict.new(name: conflict_params[:name], description: conflict_params[:description], end_date: conflict_params[:end_date], cycle_id: conflict_params[:cycle_id])
+        
     respond_to do |format|
       if @conflict.save
+          conflict_params[:responsibility_ids].reject(&:empty?).each_with_index do |id|
+          ResponsibilityConflict.create(conflict_id: @conflict.id, responsibility_id: id)
+      end
         format.html { redirect_to @conflict, notice: "Conflict was successfully created." }
         format.json { render :show, status: :created, location: @conflict }
       else
@@ -70,6 +73,6 @@ class ConflictsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def conflict_params
-      params.require(:conflict).permit(:name, :description, :end_date, :cycle_id)
+      params.require(:conflict).permit(:name, :description, :end_date, :cycle_id, responsibility_ids:[])
     end
 end
