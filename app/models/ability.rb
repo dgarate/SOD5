@@ -8,21 +8,17 @@ class Ability
     #
       user ||= User.new # guest user (not logged in)
       if user.superadmin_role?
-        can :manage, :User
-        can :manage, :Company
-      end
-      
-      if user.supervisor_role?
-        can :manage, :Responsibility
-        can :manage, :Cycle
-        can :manage, :Conflict
-      end
-    
-      if user.user_role?
-        can :read, :Responsibility
-        can :read, :Cycle
-        can :read, :Conflict
-        can :manage, :User
+        can :manage, User
+        can :manage, Company
+        can :manage, :all
+      elsif user.supervisor_role?
+        can :manage, Responsibility
+        can :manage, Cycle
+        can :manage, Conflict
+      elsif user.user_role?
+        can :read, Responsibility
+        can :read, Cycle
+        can :read, Conflict
       end
     
 

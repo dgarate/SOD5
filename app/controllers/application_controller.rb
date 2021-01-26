@@ -5,11 +5,7 @@ class ApplicationController < ActionController::Base
   
   protected
 
-  rescue_from CanCan::AccessDenied do
-    flash[:error] = 'Access denied! ==> Returned back to HOME page'
-    redirect_to root_url
-  end
-
+  
   def after_sign_in_path_for(resource)
     users_path
   end
