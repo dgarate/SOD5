@@ -16,8 +16,8 @@
     <% @user_accesses.each do |user_access| %>
       <tr>
         <td><%= user_access.username %></td>
-        <td><%= user_access.responsibility %></td>
-        <td><%= user_access.conflicts %></td>
+        <td><%= user_access.responsibilities.pluck(:name) %></td>
+        <td><%= user_access.conflicts.pluck(:name) %></td>
         <td><%= link_to 'Show', user_access %></td>
         <td><%= link_to 'Edit', edit_user_access_path(user_access) %></td>
         <td><%= link_to 'Destroy', user_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>

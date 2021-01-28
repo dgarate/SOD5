@@ -17,9 +17,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :responsibility %>
-    <%= form.text_field :responsibility %>
+    <%= form.label :responsibilities %>
+    <%= form.collection_check_boxes(:responsibility_ids, Responsibility.all, :id ,:name) do |b| %>
+      <%= b.label class:"label-checkbox" do %>
+        <%= b.check_box + b.text%>
+        
+      <% end %>
+    <% end %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
