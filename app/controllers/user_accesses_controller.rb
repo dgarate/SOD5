@@ -3,6 +3,11 @@ class UserAccessesController < ApplicationController
 
   # GET /user_accesses
   # GET /user_accesses.json
+  def import_xlsx
+    file = params[:file]
+    UserAccess.read_xlsx(file.path)
+  end
+  
   def index
     @user_accesses = UserAccess.all
   end

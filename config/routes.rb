@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :user_responsibilities
   resources :user_conflicts
-  resources :user_accesses
+  resources :user_accesses do
+    post :import_xlsx, on: :collection
+  end
   resources :responsibility_conflicts
   resources :conflicts
   resources :responsibilities

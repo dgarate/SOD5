@@ -29,3 +29,8 @@
 <br>
 
 <%= link_to 'New User Access', new_user_access_path %>
+
+<%= form_tag(import_xlsx_user_accesses_path, multipart: true, remote: true) do %>
+  <%= file_field_tag 'file' %>
+  <%= submit_tag("import") %>
+<% end %>

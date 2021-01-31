@@ -22,6 +22,7 @@ gem 'cancancan'
 gem 'activeadmin'
 gem 'chartkick'
 gem 'highcharts'
+gem 'roo'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
