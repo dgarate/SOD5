@@ -38,4 +38,9 @@ class UserAccess < ApplicationRecord
 
         end
     end
+
+    def user_conflicts_count
+        UserAccess.conflicts.group(:name).count
+        
+    end
 end

@@ -15,7 +15,7 @@
     <% @user_conflicts.each do |user_conflict| %>
       <tr>
         <td><%= user_conflict.user_access_id %></td>
-        <td><%= user_conflict.user_problems %></td>
+        <td><%= user_conflict.id %></td>
         <td><%= link_to 'Show', user_conflict %></td>
         <td><%= link_to 'Edit', edit_user_conflict_path(user_conflict) %></td>
         <td><%= link_to 'Destroy', user_conflict, method: :delete, data: { confirm: 'Are you sure?' } %></td>

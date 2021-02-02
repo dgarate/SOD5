@@ -18,11 +18,10 @@ class Conflict < ApplicationRecord
     users 
   end
 
-
-
-  def count_user_per_conflict
-    Conflict.group(:cycle).count
+  def self.group_cycle_user
+    
   end
+
 
 
 end
