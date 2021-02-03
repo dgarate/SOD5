@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :dashboards
-  devise_for :users
+  devise_for :users, controllers: { 
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registration: 'users/registrations'
+   }
   root to: 'home#index'
   resources :user_responsibilities
   resources :user_conflicts
