@@ -56,3 +56,4 @@ ResponsibilityConflict.create(responsibility: r4, conflict: c4)
 
 UserConflict.create(user_access: u1, conflict: c1)
 
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
