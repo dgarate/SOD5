@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Username</th>
+      <th>Period</th>
       <th>Responsibility</th>
       <th>Conflicts</th>
       <th>Conflicts_count</th>
@@ -17,6 +18,7 @@
     <% @user_accesses.each do |user_access| %>
       <tr>
         <td><%= user_access.username %></td>
+        <td><%= user_access.period %></td>
         <td><%= user_access.responsibilities.pluck(:name) %></td>
         <td><%= user_access.conflicts.pluck(:name) %></td>
         <td><%= user_access.conflicts.count %></td>

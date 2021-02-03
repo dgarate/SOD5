@@ -8,7 +8,7 @@ class DashboardsController < InheritedResources::Base
     
     def index
       @conflicts_by_cycle = Conflict.group_cycle  
-      # @users_with_conflicts = UserAccess.conflicts
+      @conflicts_users_count = Conflict.group_conflict_user_period
     end
     
 

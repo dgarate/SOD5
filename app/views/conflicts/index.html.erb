@@ -18,7 +18,7 @@
       <th>Cycle</th>
       <th>Name</th>
       <th>Description</th>
-      <th>Conflict Users</th>
+      <th>Period</th>
       <th>Conflict Qty</th>
       <th>End date</th>
       <th colspan="3"></th>
@@ -27,13 +27,12 @@
 
   <tbody>
     <% @conflicts.each do |conflict| %>
-      <% conflict_users = conflict.users%>
-      <tr>
+        <tr>
         <td><%= conflict.cycle.name %></td>
         <td><%= conflict.name %></td>
         <td><%= conflict.description %></td>
-        <td><%= conflict_users.pluck(:username) %></td>
-        <td><%= conflict_users.count %></td>
+        <td><%= conflict.user_accesses.pluck(:period) %></td>
+        <td><%= conflict.user_accesses.count %></td>
         <td><%= conflict.end_date %></td>
         <td><%= link_to 'Show', conflict %></td>
         <td><%= link_to 'Edit', edit_conflict_path(conflict) %></td>
