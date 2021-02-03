@@ -5,6 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
   belongs_to :company
+  after_create :notify
+
+  def notify
+    UserMailer.welcome_email(self).deliver_later
+  end
+
 
   def self.from_omniauth(access_token)
     data = access_token.info

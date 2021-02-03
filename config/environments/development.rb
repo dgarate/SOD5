@@ -34,6 +34,12 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: '1610f0dc7cf9317741ee125be2e31b8f-77751bfc-712d4416',
+    domain: 'sandbox7ad32adc13c54676802b95f846076913.mailgun.org',
+    # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
+  }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.

@@ -61,6 +61,12 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "SOD5_production"
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: '1610f0dc7cf9317741ee125be2e31b8f-77751bfc-712d4416',
+    domain: 'sandbox7ad32adc13c54676802b95f846076913.mailgun.org',
+    # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
