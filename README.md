@@ -1,5 +1,8 @@
 # README
 
+The configured domain is: www.sod5.tk
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
