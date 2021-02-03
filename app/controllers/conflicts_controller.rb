@@ -4,7 +4,7 @@ class ConflictsController < ApplicationController
   # GET /conflicts
   # GET /conflicts.json
   def index
-    @conflicts = Conflict.group_conflict_user_period
+    @conflicts = Conflict.all
     @conflict_cycle_count = Conflict.group_cycle
     @user_conflicts = UserAccess.user_period
     

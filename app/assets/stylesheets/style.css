@@ -58,15 +58,14 @@ align-items: center;
 
 
 .hero-section {
-  background-image: url('../img/Hero_img.jpg');
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  color: #ffffff;
+  color: #7b64b1;
   text-shadow: 0.125em 0.25em 0.125em #707070;
-  padding: 18.25rem 3.125rem;
-  width: 100vw;
-  height: 100vh;
+  
+  
 
 }
 
