@@ -1,9 +1,8 @@
 # README
 
-The configured domain for this application is: www.sod5.tk
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The configured domain for this application is: www.sod5.tk
+The relational model is on the project mail folder, file name: Relational Model.jpg
 
 * Ruby version:
 
