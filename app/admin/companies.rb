@@ -5,7 +5,7 @@ ActiveAdmin.register Company do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :end_date
+  permit_params :name, :end_date
   #
   # or
   #

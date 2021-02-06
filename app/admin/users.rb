@@ -5,7 +5,7 @@ ActiveAdmin.register User do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :email, :superadmin_role, :supervisor_role, :user_role, :end_date, :company_id, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :provider, :uid
+  permit_params :name, :email, :superadmin_role, :supervisor_role, :user_role, :end_date, :company_id, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :provider, :uid
   #
   # or
   #

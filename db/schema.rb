@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_203220) do
+ActiveRecord::Schema.define(version: 2021_02_06_193332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_203220) do
     t.boolean "supervisor_role", default: false
     t.boolean "user_role", default: true
     t.date "end_date"
-    t.bigint "company_id", null: false
+    t.bigint "company_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "encrypted_password", default: "", null: false

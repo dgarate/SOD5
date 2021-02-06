@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
-  belongs_to :company
+  belongs_to :company, optional: true
   after_create :notify
+  # validates :company, presence: false, allow_nil: true
 
   def notify
     UserMailer.welcome_email(self).deliver_later

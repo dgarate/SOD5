@@ -10,6 +10,7 @@ class Ability
       if user.superadmin_role?
         can :manage, User
         can :manage, Company
+        can :manage, AdminUser
         can :manage, :all
       elsif user.supervisor_role?
         can :manage, Responsibility
@@ -19,6 +20,7 @@ class Ability
         can :read, Responsibility
         can :read, Cycle
         can :read, Conflict
+        can :manage, UserAccess
       end
     
 
