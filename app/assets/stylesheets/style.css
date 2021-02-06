@@ -20,7 +20,7 @@
 }
 
 body {
-padding-top: 75px;
+padding-top: 30px;
 font-family: 'Cabin', sans-serif;
 color: #373a3c;
 
@@ -64,14 +64,24 @@ align-items: center;
   background-position: center center;
   color: #7b64b1;
   text-shadow: 0.125em 0.25em 0.125em #707070;
-  
-  
-
+ 
 }
 
 h1 {
   color: #373a3c;
   } 
+
+h4 {
+font-size: large;
+line-height: normal;
+margin-bottom: auto;
+} 
+  
+.navbar-toggler {
+  font-size:medium
+  } 
+  
+
 
 .card-deck {
   margin-inline-start: auto;
