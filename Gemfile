@@ -26,6 +26,8 @@ gem 'roo'
 gem 'omniauth-google-oauth2'
 gem 'omniauth', "~> 1.9.1"
 gem 'mailgun-ruby', '~>1.1.6'
+gem 'caxlsx'
+gem 'caxlsx_rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

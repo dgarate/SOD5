@@ -10,6 +10,16 @@ class UserAccessesController < ApplicationController
   
   def index
     @user_accesses = UserAccess.all
+
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename=user_accesses.xlsx"
+      }
+      format.html { render :index }
+    end
+
   end
 
   # GET /user_accesses/1

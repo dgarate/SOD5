@@ -1,0 +1,26 @@
+wb = xlsx_package.workbook
+
+  wb.styles do |style|
+    project_heading = style.add_style(b: true, sz: 14)
+    heading = style.add_style(b: true)
+
+    wb.add_worksheet(name: 'User_Acceses') do |sheet|
+
+      # Add the date this was downloaded
+      sheet.add_row ["Downloaded at", Time.now.strftime("%b %-d, %Y")], style: heading
+      # Add a blank row
+      sheet.add_row []
+
+      # Create the header row
+      sheet.add_row ["Username", "Period", "Responsibility", "Conflict", "Conflicts_count"], style: heading
+      # Create entries for each User_Access
+      @user_accesses.each do |user_access|
+        sheet.add_row [user_access.username, 
+        user_access.period,
+        user_access.responsibilities.pluck(:name), 
+        user_access.conflicts.pluck(:name),
+        user_access.conflicts.count
+        ]
+      end
+  end
+end
