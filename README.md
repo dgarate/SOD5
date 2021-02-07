@@ -1,6 +1,6 @@
 # README
 
-
+Project in Trello: https://trello.com/b/flYKA8IA/administradorsegregacionfunciones#
 The configured domain for this application is: www.sod5.tk
 The relational model is on the project mail folder, file name: Relational Model.jpg
 
@@ -27,15 +27,21 @@ ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+       
 
-        Admin should log to the following link: http://localhost:3000/admin, with the following credentials: 
-            	• User: admin@example.com
-            	• Password: password
-        * Admin user should create a "default Company” first and then all the required company.
+        Load your app into Heroku
+        Once done, enter your application console on heroku with the following command:$ heroku run rails console)
+        Create the admin on admin_user table:
+            AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+        Create the admin on user table:
+            User.create!(name: 'admi', email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+        Users Maintenance:
         * OAuth users: Once user Sign_up, the default company should be updated.
         * For all new User: Ability/Role should be updated as required.
         * Mailgun should be update with credentials for production
         * To update welcome email, please go to: app/views/user_mailer/welcome_email.html.erb
+
+        
 
 
 * ...
