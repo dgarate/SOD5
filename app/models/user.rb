@@ -7,7 +7,8 @@ class User < ApplicationRecord
   belongs_to :company, optional: true
   after_create :notify
   # validates :company, presence: false, allow_nil: true
-
+  after_validation :report_validation_errors_to_rollbar
+  
   def notify
     UserMailer.welcome_email(self).deliver_later
   end

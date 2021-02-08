@@ -5,6 +5,7 @@ class UserAccess < ApplicationRecord
     has_many :responsibilities, through: :user_responsibilities
 
     accepts_nested_attributes_for :user_responsibilities
+    after_validation :report_validation_errors_to_rollbar
 
     # def conflicts
     #     r = responsibilities

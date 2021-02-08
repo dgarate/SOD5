@@ -4,4 +4,5 @@ class Responsibility < ApplicationRecord
   has_many :conflicts, through: :responsibility_conflicts
   has_many :user_responsibilities, dependent: :destroy
   has_many :user_accesses, through: :user_responsibilities
+  after_validation :report_validation_errors_to_rollbar
 end

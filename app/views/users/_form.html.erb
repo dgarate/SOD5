@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :company_id %>
-    <%= form.text_field :company_id %>
+    <%= form.collection_select :company_id, Company.order(:name), :id, :name %>
   </div>
 
   <div class="actions">

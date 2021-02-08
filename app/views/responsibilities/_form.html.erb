@@ -33,9 +33,8 @@
 
   <div class="field">
     <%= form.label :cycle_id %>
-    <%= form.text_field :cycle_id %>
+    <%= form.collection_select :cycle_id, ::Cycle.order(:name), :id, :name %>
   </div>
-
 
 
   <div class="actions">

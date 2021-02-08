@@ -4,7 +4,7 @@ class Conflict < ApplicationRecord
   has_many :responsibilities, through: :responsibility_conflicts
   has_many :user_conflicts, dependent: :destroy
   has_many :user_accesses, through: :user_conflicts
-
+  after_validation :report_validation_errors_to_rollbar
   def self.group_cycle
     cycles = Conflict.group(:cycle).count
     graph_values = {}
